@@ -3,22 +3,22 @@ import {useState, useEffect} from 'react';
 
 
 function ToDoForm ({addTask}) {
-	const [userInput, setUserInput] = useState('')
+   const [userInput, setUserInput] = useState('')
    const [userPlaceholder, setUserPlaceholder] = useState('Add task')
 
    const handleSubmit = (e) => {
       e.preventDefault()
       addTask(userInput)
-	   setUserInput('')
+      setUserInput('')
    }
 
    const handleChange = (e) => {
-	   setUserInput(e.currentTarget.value)
+      setUserInput(e.currentTarget.value)
    }
 
    const handleKeyPress = (e) => {
       if(e.key === 'Enter') {
-	      handleSubmit(e)
+         handleSubmit(e)
       }
    }
 
@@ -40,7 +40,7 @@ function ToDoForm ({addTask}) {
             placeholder={userPlaceholder}
          />
          <button className='todo-button'>Save</button>
-	   </form>
+      </form>
    )
 }
 
